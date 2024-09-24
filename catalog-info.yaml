@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: md59kz6ro-nodejs-gitops
+  description: This is GitOps manifest for md59kz6ro-nodejs   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: md59kz6ro-nodejs
+    janus-idp.io/tekton: md59kz6ro-nodejs
+    backstage.io/kubernetes-id: md59kz6ro-nodejs 
+    backstage.io/techdocs-ref: dir:. 
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:md59kz6ro-nodejs
